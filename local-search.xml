@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>how-to-use-cs</title>
+    <link href="/2021/05/19/how-to-use-cs/"/>
+    <url>/2021/05/19/how-to-use-cs/</url>
+    
+    <content type="html"><![CDATA[<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">scene.getStylesheets().addAll(<span class="hljs-keyword">this</span>.getClass().getResource(<span class="hljs-string">&quot;firstTry.css&quot;</span>).toExternalForm());<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>help</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>how_to_use_Javafx</title>
     <link href="/2021/05/07/how-to-use-Javafx/"/>
     <url>/2021/05/07/how-to-use-Javafx/</url>
