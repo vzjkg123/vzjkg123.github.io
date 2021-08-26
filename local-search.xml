@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>Practice_Note</title>
+    <link href="/2021/08/26/Practice-Note/"/>
+    <url>/2021/08/26/Practice-Note/</url>
+    
+    <content type="html"><![CDATA[<ol><li><p>当嵌套代码块内出现重复相同判断应当意识到要检查代码是否可以进行优化，减少相同语句的重复执行（如图）</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">////////修改前</span><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">numRescueBoats</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] people, <span class="hljs-keyword">int</span> limit)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> answer = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>, len = people.length, j = len - <span class="hljs-number">1</span>;<br>        Arrays.sort(people);<br>        <span class="hljs-keyword">while</span> (i &lt; j) &#123;<br>            <span class="hljs-keyword">while</span> (j &gt; i &amp;&amp; people[j] + people[i] &gt; limit) &#123;<br>                answer++;<br>                j--;<br>            &#125;<br>            <span class="hljs-keyword">if</span> (j &gt; i &amp;&amp; people[j] + people[i] &lt;= limit) &#123;<br>                answer++;<br>                i++;<br>                j--;<br>            &#125;<br>            <span class="hljs-keyword">if</span> (i == j) &#123;<br>                answer++;<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> answer;<br>    &#125;<br><span class="hljs-comment">////////修改后</span><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">numRescueBoats</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] people, <span class="hljs-keyword">int</span> limit)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> answer = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>, len = people.length, j = len - <span class="hljs-number">1</span>;<br>        Arrays.sort(people);<br>        <span class="hljs-keyword">while</span> (i &lt;= j) &#123;<br>            <span class="hljs-keyword">if</span> (people[j] + people[i] &lt;= limit) &#123;<br>                i++;<br>            &#125;<br>            j--;<br>            answer++;<br>        &#125;<br>        <span class="hljs-keyword">return</span> answer;<br>    &#125;<br></code></pre></td></tr></table></figure></li><li><p>待续o_o ….</p></li></ol>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>note</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>password</title>
     <link href="/2021/05/30/password/"/>
     <url>/2021/05/30/password/</url>
