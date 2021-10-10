@@ -197,7 +197,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      66 字
+      78 字
     </span>
   
 
@@ -254,12 +254,12 @@
               </p>
             
             <div class="markdown-body">
-              <h3 id="添加本地转发规则"><a href="#添加本地转发规则" class="headerlink" title="添加本地转发规则"></a>添加本地转发规则</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">iptables -t nat -<span class="hljs-selector-tag">A</span> PREROUTING -<span class="hljs-selector-tag">p</span> tcp --dport <span class="hljs-number">80</span> -j REDIRECT --<span class="hljs-selector-tag">to</span>-ports <span class="hljs-number">8080</span><br></code></pre></td></tr></table></figure>
+              <h3 id="添加本地转发规则"><a href="#添加本地转发规则" class="headerlink" title="添加本地转发规则"></a>添加本地转发规则</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs css">//将<span class="hljs-number">80</span>端口的访问重定向到<span class="hljs-number">8080</span><br>iptables -t nat -<span class="hljs-selector-tag">A</span> PREROUTING -<span class="hljs-selector-tag">p</span> tcp --dport <span class="hljs-number">80</span> -j REDIRECT --<span class="hljs-selector-tag">to</span>-ports <span class="hljs-number">8080</span><br></code></pre></td></tr></table></figure>
 
 
-<h3 id="删除转发规则"><a href="#删除转发规则" class="headerlink" title="删除转发规则"></a>删除转发规则</h3><ol>
-<li>列出规则，包括序号<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs excel">iptables -<span class="hljs-built_in">t</span> nat -L -<span class="hljs-built_in">n</span> --line-numbers<br></code></pre></td></tr></table></figure></li>
-</ol>
+<h3 id="删除转发规则"><a href="#删除转发规则" class="headerlink" title="删除转发规则"></a>删除转发规则</h3><p>1.列出规则，包括序号</p>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs excel">iptables -<span class="hljs-built_in">t</span> nat -L -<span class="hljs-built_in">n</span> --line-numbers<br></code></pre></td></tr></table></figure>
+
 <p>2.根据序号删除，这里假如它的序号是1</p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">iptables</span> -t nat -D PREROUTING <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 
