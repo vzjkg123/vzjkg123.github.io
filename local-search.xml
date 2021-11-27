@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>如何用npm在vue中引入bootstrap</title>
+    <link href="/2021/11/27/%E5%A6%82%E4%BD%95%E7%94%A8npm%E5%9C%A8vue%E4%B8%AD%E5%BC%95%E5%85%A5bootstrap/"/>
+    <url>/2021/11/27/%E5%A6%82%E4%BD%95%E7%94%A8npm%E5%9C%A8vue%E4%B8%AD%E5%BC%95%E5%85%A5bootstrap/</url>
+    
+    <content type="html"><![CDATA[<h1 id="如何在Webstorm下的vue项目中引入BootStrap"><a href="#如何在Webstorm下的vue项目中引入BootStrap" class="headerlink" title="如何在Webstorm下的vue项目中引入BootStrap"></a>如何在Webstorm下的vue项目中引入BootStrap</h1><h2 id="一、安装依赖"><a href="#一、安装依赖" class="headerlink" title="一、安装依赖"></a>一、安装依赖</h2><figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs q">cnpm install bootstrap --<span class="hljs-built_in">save</span>-<span class="hljs-built_in">dev</span><br>cnpm install jquery --<span class="hljs-built_in">save</span>-<span class="hljs-built_in">dev</span><br>cnpm install popper.js --<span class="hljs-built_in">save</span>-<span class="hljs-built_in">dev</span><br>npm install --<span class="hljs-built_in">save</span> @popperjs/core<br></code></pre></td></tr></table></figure><h2 id="二、在-main-js-中添加如下代码"><a href="#二、在-main-js-中添加如下代码" class="headerlink" title="二、在   main.js  中添加如下代码"></a>二、在   <em><strong>main.js</strong></em>  中添加如下代码</h2><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs aspectj"><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;bootstrap&#x27;</span><br></code></pre></td></tr></table></figure><h2 id="三、在-script-中引入如下代码"><a href="#三、在-script-中引入如下代码" class="headerlink" title="三、在  script 中引入如下代码"></a>三、在  <em><strong>script</strong></em> 中引入如下代码</h2><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs aspectj"><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;bootstrap/dist/css/bootstrap.min.css&#x27;</span><br><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;bootstrap/dist/js/bootstrap.min.js&#x27;</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>tech</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Questions</title>
     <link href="/2021/10/11/Questions/"/>
     <url>/2021/10/11/Questions/</url>
@@ -68,6 +87,12 @@
     <content type="html"><![CDATA[<p>学号@ecut.edu.cn</p><p>#%Dh身份证后六位</p>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>help</tag>
+      
+    </tags>
     
   </entry>
   
